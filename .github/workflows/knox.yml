@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm install basic-ftp
+      - run: npm install ssh2-sftp-client
       - run: node knox-pull.js
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
